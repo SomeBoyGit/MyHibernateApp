@@ -19,13 +19,14 @@ public class App {
         try {
             session.beginTransaction();
 
-            Person person1 = new Person("Test1", 30);
-            Person person2 = new Person("Test2", 40);
-            Person person3 = new Person("Test3", 50);
+//            Person person = session.get(Person.class, 2);
 
+//            person.setName("Some Name");
+//            person.setAge(2);
+            Person person1 = new Person("New Person", 34);
             session.save(person1);
-            session.save(person2);
-            session.save(person3);
+
+//            session.delete(person);
 
             session.getTransaction().commit();
         }finally {
